@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var url = 'mongodb://localhost:27017/keyvalue';
+var url = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/keyvalue';
 var keyValue = mongoose.model('keyValue', {key: String, values: Array});
 
 
