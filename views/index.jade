@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  form(name="find", action="find", method="post")
+    strong Find
+    .form-group
+      label Key
+      input.form-control(type="text",name="key")
+      label Timestamp
+      input.form-control(type="number",name="timestamp")
+      input(type='hidden' name='flag' value="up")
+    button.btn.btn-default(type="submit") Submit
+  form(name="updateInsert", action="updateInsert", method="post")
+    strong Insert
+    .form-group
+      label Key
+      input.form-control(type="text", name="key")
+      label Value
+      input.form-control(type"text", name="value")
+      input(type='hidden' name='flag' value="up")
+    button.btn.btn-default(type="submit") Submit
+  p= result
