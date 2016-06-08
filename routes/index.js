@@ -25,7 +25,6 @@ router.post('/object', function(req, res, next){
   });
 });
 
-
 router.get('/', function(req, res, next) {
   var result = req.query.result || '';
   res.render('index', { result: result });
