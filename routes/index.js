@@ -15,13 +15,7 @@ router.post('/object', function(req, res, next){
   var keyName = Object.keys(req.body)[0]
   var data = {key: keyName, value: req.body[keyName]};
   mongoHelper.updateInsertDocument(data, function(result) {
-    if (req.body.flag) {
-      var string = encodeURIComponent(result);
-      res.redirect('/?result=' + result);
-    }
-    else {
       res.sendStatus(200);
-    }
   });
 });
 
