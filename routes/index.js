@@ -26,7 +26,6 @@ router.post('/object', function(req, res, next){
 });
 
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
   var result = req.query.result || '';
   res.render('index', { result: result });

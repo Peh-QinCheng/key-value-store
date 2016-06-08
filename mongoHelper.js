@@ -13,10 +13,6 @@ function findDocument(query,callback) {
     } else if (Obj) {
       if (query.timestamp) { // if timestamp provided
         var value = findValue(query.timestamp,Obj.values);
-        // var values = Obj.values.filter(function(x){return x.timestamp <= parseInt(query.timestamp)});
-        // var bestValue = Math.max.apply(Math,values.map(function(o){return o.timestamp;}));
-        // var doc = Obj.values.find(x=> x.timestamp === bestValue);
-        // var value = doc ? doc.value : "No value assigned to this key at this time"
       } else { //if no timestamp
         var value = Obj.values.slice(-1).pop().value;
       }
